@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+	overflow: hidden;
+	transform: rotateZ(-40deg);
+}
+
+.box-holder {
+	width: 100vw;
+	height: 100vh;
+
+	animation: holder-move 1s infinite ease-in 3s;
+}
+
+@keyframes holder-move {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-200px);
+	}
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(#ebeca3, #dbde31);
+	position: absolute;
+	bottom: 15%;
+	left: calc(50% - 200px);
+	box-shadow: 0 0 10px 0 #dbde31, 0 0 20px 0 #ffc107, 0 0 30px 0 #ff5722;
+	transform-origin: bottom right;
+	animation: box-move 1s infinite ease-in 3s;
+}
+
+@keyframes box-move {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	80% {
+		transform: rotateZ(90deg);
+	}
+
+	90% {
+		transform: rotateZ(80deg);
+	}
+
+	100% {
+		transform: rotateZ(90deg);
+	}
+}
